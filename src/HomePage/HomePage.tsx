@@ -1,3 +1,4 @@
+import React from 'react'
 import './HomePage.scss';
 import { Search, Newspaper, } from '@mui/icons-material';
 import {

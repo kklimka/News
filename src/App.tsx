@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.scss';
 import HomePage from './HomePage/HomePage';
 import { Routes, Route } from "react-router-dom";
