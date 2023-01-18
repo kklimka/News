@@ -1,0 +1,28 @@
+.HomePage {
+    background-color: #E5E5E5;
+    min-height: 100vh;
+
+    .searchBox {
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+
+        .searchInput {
+            width: 70%;
+
+
+        }
+    }
+
+    .searchNews {
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .numberOfResults {
+        margin: 30px;
+        border-bottom: 1px solid rgba(33, 29, 29, 0.68);
+    }
+}
