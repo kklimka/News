@@ -25,14 +25,20 @@ function NewsResults({ news, setDetailedNews }: Props) {
     );
     if (findTitle || findDescription) {
       filteredArticles.push(arr);
+     
     }
+    return true;
   });
   console.log(filteredArticles);
   const newArticles =
-    typeof news.userInput === "string"
+    typeof(news.userInput) === "string"
       ? filteredArticles.slice(0, newsOnPage)
       : news.res?.articles?.slice(0, newsOnPage);
-  const totalNews = Number(newArticles?.length);
+      
+  // const totalNews = Number(filteredArticles?.length);
+  const totalNews = typeof(news.userInput) === "string"
+  ? Number(filteredArticles?.length)
+  : Number(news.res?.articles?.length);
   if (Object.keys(news).length !== 0) {
     return (
       <div>

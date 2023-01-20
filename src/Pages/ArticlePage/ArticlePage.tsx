@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./ArticlePage.scss";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArticlesTypes from "../../types/ArticlesTypes";
-import DataTypes from "../../types/DataTypes";
+
 type Props = {
   detailedNews: ArticlesTypes;
 };
@@ -24,7 +24,7 @@ function ArticlePage({ detailedNews }: Props) {
             {detailedNews.content}
           </p>
           <p className="articalText ">
-          <a href={detailedNews.url} target='_blank'>
+          <a href={detailedNews.url} target='_blank' rel="noreferrer">
           Link to the original article
           </a>
           </p>

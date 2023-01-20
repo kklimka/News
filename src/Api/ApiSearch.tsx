@@ -13,8 +13,7 @@ function ApiSearch(userInput, setSearchNews) {
       const item = {
         res: res.data,
         userInput: userInput,
-
-      }
+      };
       setSearchNews(item);
     })
     .catch((err) => {

@@ -16,10 +16,6 @@ type Props = {
     setDetailedNews: React.Dispatch<React.SetStateAction<object>>;
   };
 function NewsCard({articles, setDetailedNews, userInput }: Props) {
-  console.log(articles);
-  if(typeof(userInput) === 'string'){
-  console.log(userInput);
-  }
   
   return (
     <Card sx={{ maxWidth: 350, marginBottom: 10 }}>
