@@ -1,0 +1,27 @@
+.searchNews {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .numberOfResults {
+    margin: 30px;
+    border-bottom: 1px solid rgba(33, 29, 29, 0.68);
+  }
+  .loadMoreButtonWrapp {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    .loadMoreButton {
+      background-color: rgba(33, 29, 29, 0.68);
+      color: #e5e5e5;
+    }
+    .loadMoreButton:hover{
+      background-color: rgba(63, 59, 59, 0.68);
+    }
+    .loadMoreButton:disabled{
+      color: rgba(162, 159, 159, 0.68);
+      opacity: 30%;
+    }
+  }
+ 

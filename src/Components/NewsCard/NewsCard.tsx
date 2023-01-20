@@ -9,15 +9,19 @@ import {
   CardActions,
   Button,
 } from "@mui/material";
-import icon from "../../assets/iconN.svg";
-
-function NewsCard() {
+import ArticlesTypes from '../../types/ArticlesTypes';
+type Props = {
+    articles: ArticlesTypes;
+    setDetailedNews: React.Dispatch<React.SetStateAction<object>>;
+  };
+function NewsCard({articles, setDetailedNews }: Props) {
   return (
     <Card sx={{ maxWidth: 350, marginBottom: 10 }}>
       <CardMedia
         sx={{ height: 140, width: 350 }}
-        image={icon}
+        image={articles.urlToImage}
         title="image new"
+        component='img'
       />
       <CardContent>
         <Typography
@@ -26,20 +30,21 @@ function NewsCard() {
           className="dateBox"
         >
           <CalendarMonth className="dateIcon" />
-          June 29th, 2021
+          {articles.publishedAt?.slice(0, 10)}
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
-          The 2020 World's Most Valuable Brands
+          {articles.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Non sed molestie tortor massa vitae in mattis. Eget vel consequat
-          hendrerit commodo libero aliquam. Urna arcu nunc tortor vitae
-          pharetra...
+          {articles.description}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions >
         <Link to="/article" className="moreInformationLink">
           <Button
+          onClick={() => {
+            setDetailedNews(articles);
+          }}
             size="small"
             sx={{ color: "#363636", fontWeight: 700 }}
             className="moreInformationButton"
