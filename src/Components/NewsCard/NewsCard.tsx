@@ -12,9 +12,15 @@ import {
 import ArticlesTypes from '../../types/ArticlesTypes';
 type Props = {
     articles: ArticlesTypes;
+    userInput:string|undefined;
     setDetailedNews: React.Dispatch<React.SetStateAction<object>>;
   };
-function NewsCard({articles, setDetailedNews }: Props) {
+function NewsCard({articles, setDetailedNews, userInput }: Props) {
+  console.log(articles);
+  if(typeof(userInput) === 'string'){
+  console.log(userInput);
+  }
+  
   return (
     <Card sx={{ maxWidth: 350, marginBottom: 10 }}>
       <CardMedia

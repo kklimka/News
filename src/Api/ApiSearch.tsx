@@ -10,7 +10,12 @@ function ApiSearch(userInput, setSearchNews) {
   axios
     .get(url)
     .then((res) => {
-      setSearchNews(res.data);
+      const item = {
+        res: res.data,
+        userInput: userInput,
+
+      }
+      setSearchNews(item);
     })
     .catch((err) => {
       console.log(err);

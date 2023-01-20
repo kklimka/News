@@ -1,6 +1,6 @@
-import ArticlesTypes from "./ArticlesTypes";
-export default interface DataTypes {
-    articles?: Array<ArticlesTypes>;
-    totalResults?: number;
 
-  }
+import ResType from "./ResType";
+export default interface DataTypes {
+  res?: ResType;
+  userInput?: string;
+}

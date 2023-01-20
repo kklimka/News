@@ -7,8 +7,8 @@ import ApiSearch from "./Api/ApiSearch";
 import DataTypes from "./types/DataTypes";
 import ApiTopNews from "./Api/ApiTopNews";
 import useLocalStorageState from "use-local-storage-state";
-import { log } from "console";
 import ArticlesTypes from "./types/ArticlesTypes";
+import Feature from "./Feature/Feature";
 function App() {
   const [searchNews, setSearchNews] = useState<DataTypes>({});
   const [topNews, setTopNews] = useState<DataTypes>({});
@@ -21,17 +21,18 @@ function App() {
 
   const findNews = (userInput) => {
     ApiSearch(userInput, setSearchNews);
+    
   };
+  
   
     useEffect(() => {
       ApiTopNews(setTopNews);
     }, []);
   
-  console.log(searchNews);
-  console.log(topNews);
-  console.log(detailedNews);
+  
   
   const news = Object.keys(searchNews).length === 0 ? topNews : searchNews;
+console.log(news);
 
   return (
     <Routes>

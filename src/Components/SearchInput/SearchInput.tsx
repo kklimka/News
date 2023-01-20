@@ -9,6 +9,7 @@ import { useState } from 'react';
 import './SearchInput.scss';
 type Props = {
     findNews: Function;
+    
   };
 function SearchInput({findNews} : Props) {
     const [searchNews, setSearchNews] = useState<string>('');

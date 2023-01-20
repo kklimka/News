@@ -7,7 +7,12 @@ function ApiSearch(setTopNews) {
   axios
     .get(url)
     .then((res) => {
-        setTopNews(res.data);
+      const item = {
+        res: res.data,
+        
+
+      }
+      setTopNews(item);
     })
     .catch((err) => {
       console.log(err);
