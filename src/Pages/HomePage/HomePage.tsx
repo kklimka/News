@@ -6,7 +6,6 @@ import DataTypes from "../../types/DataTypes";
 
 type Props = {
   findNews: Function;
-  
   news: DataTypes;
   setDetailedNews: React.Dispatch<React.SetStateAction<object>>;
 };
