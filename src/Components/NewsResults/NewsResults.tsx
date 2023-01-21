@@ -29,9 +29,6 @@ function NewsResults({ news, setDetailedNews }: Props) {
             })}
           </div>
         </section>
-        <div className="loadMoreButtonWrapp">
-          
-        </div>
       </div>
     );
   }
