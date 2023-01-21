@@ -13,10 +13,9 @@ import ArticlesTypes from '../../types/ArticlesTypes';
 import Icon from '../../assets/newspaper.svg'
 type Props = {
     articles: ArticlesTypes;
-    userInput:string|undefined;
     setDetailedNews: React.Dispatch<React.SetStateAction<object>>;
   };
-function NewsCard({articles, setDetailedNews, userInput }: Props) {
+function NewsCard({articles, setDetailedNews }: Props) {
   const isImgInUrl = typeof(articles.image_url) === 'string' ? articles.image_url : Icon;
 
   

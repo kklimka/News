@@ -24,7 +24,6 @@ function NewsResults({ news, setDetailedNews }: Props) {
                   articles={articles}
                   key={Math.random()}
                   setDetailedNews={setDetailedNews}
-                  userInput={news.userInput}
                 />
               );
             })}
