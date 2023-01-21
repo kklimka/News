@@ -1,9 +1,8 @@
 import axios from "axios";
 
 function ApiSearch(setTopNews) {
-  const ApiKey: string = "6cec1399bb1646b8be177e2511a6b639";
-  const url:string = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${ApiKey}`;
-
+  const ApiKey: string = "pub_15897e0dbb0aa831ffac7d0eb7351c857aabe";
+  const url:string = `https://newsdata.io/api/1/news?apikey=${ApiKey}&country=us&category=top&language=en`;
   axios
     .get(url)
     .then((res) => {

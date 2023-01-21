@@ -1,9 +1,9 @@
 export default interface ArticlesTypes {
     content?: string;
     description?: string;
-    publishedAt?: string;
+    pubDate?: string;
     title?: string;
-    urlToImage?: string;
-    url?: string;
+    image_url?: string|null;
+    link?: string;
 
   }

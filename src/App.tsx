@@ -28,7 +28,6 @@ function App() {
   }, []);
 
   const news = Object.keys(searchNews).length === 0 ? topNews : searchNews;
-  console.log(news);
 
   return (
     <Routes>

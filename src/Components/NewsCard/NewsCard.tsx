@@ -10,18 +10,21 @@ import {
   Button,
 } from "@mui/material";
 import ArticlesTypes from '../../types/ArticlesTypes';
+import Icon from '../../assets/newspaper.svg'
 type Props = {
     articles: ArticlesTypes;
     userInput:string|undefined;
     setDetailedNews: React.Dispatch<React.SetStateAction<object>>;
   };
 function NewsCard({articles, setDetailedNews, userInput }: Props) {
+  const isImgInUrl = typeof(articles.image_url) === 'string' ? articles.image_url : Icon;
+
   
   return (
     <Card sx={{ maxWidth: 350, marginBottom: 10 }}>
       <CardMedia
-        sx={{ height: 140, width: 350 }}
-        image={articles.urlToImage}
+        sx={{ height: 150, width: 200, marginLeft: 10}}
+        image={isImgInUrl}
         title="image new"
         component='img'
       />
@@ -32,13 +35,13 @@ function NewsCard({articles, setDetailedNews, userInput }: Props) {
           className="dateBox"
         >
           <CalendarMonth className="dateIcon" />
-          {articles.publishedAt?.slice(0, 10)}
+          {articles.pubDate?.slice(0, 10)}
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
           {articles.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {articles.description}
+          {articles.description?.slice(0, 100)}...
         </Typography>
       </CardContent>
       <CardActions >
